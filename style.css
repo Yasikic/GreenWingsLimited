@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&display=swap');
+
+:root{
+  /* COLORS */
+  --terra-cotta: #e26d5c;
+  --caribbean-green: #26c485;
+  --lavender-blush: #eee5e9;
+  --catawba: #723d46;
+  --old-burgundy: #472d30;
+  --slate-gray: #472d30;
+  --prussian-blue: #003049;
+  --dark-jungle-green: #041F1E;
+  --claret: #7D1D3F;
+  --material-blue-gray: #263238;
+
+  /* SIZES */
+  --grid-col: 100px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  border: none;
+}
+
+.link-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.active, .act {
+  background: var(--terra-cotta);
+}
+
+#attent {
+  color: #26c485;
+}
+
+.inactive {
+  border: solid 1px currentcolor;
+}
+
+.openbtn {
+  display: none;
+}
+
+.closebtn{
+  display: none;
+}
+
+.navpanel{
+  display: none;
+}
+
+.navbar {
+  position: fixed;
+  padding: 20px 0 20px 50px;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  background: rgba(0, 48, 73, 0.8);
+  font-weight: bold;
+  z-index: 10;
+}
+
+
+#logo {
+  position: relative;
+  flex-grow: 0.2;
+}
+
+#wings{
+  position: absolute;
+  width: var(--step-5);
+  height: var(--step-3);
+  left: 0;
+  top: 30%;
+  transform: translateY(-50%);
+}
+
+#logo>span{
+  z-index: 12;
+  padding-left: 40px;
+}
+
+header {
+  background: var(--prussian-blue);
+  height: 100vh;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  display: grid;
+  grid-template-columns: 570px auto;
+  grid-template-rows: var(--step-6) auto;
+  grid-gap: 15%;
+  z-index: 10;
+  overflow: hidden;
+}
+
+header #left {
+  padding-bottom: 180px;
+  padding-left: 100px;
+}
+
+header h2 {
+  font-size: var(--step-2);
+  margin: 16px 0;
+}
+
+header p{
+  line-height: 1.5;
+  font-size: var(--step--1);
+  text-align: justify;
+}
+
+#header-links {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+#header-links *{
+  flex-basis: 140px;
+}
+
+header img{
+  width: auto;
+  height: auto;
+}
+
+#right {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  border-top-left-radius: 25%;
+}
+
+#right::before{
+  width: 100%;
+  height: 100%;
+  content: '';
+  position: absolute;
+  background-image: url('https://followino.net/en/wp-content/uploads/2020/04/fabrika-1-1024x539.png');
+  background-repeat: no-repeat;
+  opacity: 0.8;
+  z-index: 2;
+  overflow: hidden;
+  right: 0;
+  clip-path: inset(0);
+}
+
+main {
+  color: black;
+  height: 100vh;
+  text-align: center;
+}
+
+section {
+  padding: 80px 150px;
+    background: #eceff1;
+}
+
+section h3{
+  font-size: var(--step-5);
+  margin-top: 0;
+  margin-bottom: 25px;
+  color: var(--material-blue-gray);
+}
+
+section p{
+  font-size: var(--step-0);
+  color: var(--prussian-blue);
+}
+
+section ol{
+  font-size: 20px;
+}
+
+#wtd {
+  background-color: var(--lavender-blush);
+}
+
+article{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 400px 400px;
+  grid-gap: 20px;
+}
+
+article div{
+  position: relative;
+  border-radius: 10px;
+  /* border: 1px solid; */
+  height: 100%;
+  width: 100%;
+  background: white;
+}
+
+article img{
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--step-10);
+  height: var(--step-10);
+}
+
+article span{
+  display: block;
+  position: absolute;
+  top: calc(40px + var(--step-10));
+  color: var(--material-blue-gray);
+  width: 100%;
+  font-size: var(--step--1);
+}
+
+article p{
+  margin: 0;
+  font-size: var(--step--1);
+}
+
+.flex{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.flex > div {
+  background: white;
+  max-width: 360px;
+  min-width: 200px;
+  height: calc(260px + var(--step-10));
+  border-radius: 10px;
+}
+
+#menu{
+  position: fixed;
+
+}
+footer {
+  width: 100%;
+  background: var(--prussian-blue);
+  color: white;
+}
+
+footer p{
+  margin: 0;
+  padding: 10px 0;
+  font-size: var(--step--1);
+}
+
+/* For mobile phones: */
+@media screen and (max-width: 1100px) {
+
+  .openbtn{
+    font-size: 30px;
+    cursor: pointer;
+    position: fixed;
+    color: var(--terra-cotta);
+    display: block;
+  }
+
+  .act {
+    background: transparent;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .navpanel {
+    display: block;
+    text-align: left;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #003049;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding: 60px 0 0 0;
+    font-weight: normal;
+}
+
+.panel0{
+  width: 0;
+}
+
+.panel220{
+  width: 220px;
+}
+
+.margl0{
+  margin-left: 0;
+}
+
+.margl220{
+  margin-left: 220px;
+}
+
+.op08{
+  opacity: 0.8;
+}
+
+.op10{
+  opacity: 1;
+}
+
+.navpanel a{
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: var(--step--1);
+  color: #bdbdbd;
+  display: block;
+  transition: 0.3s;
+}
+
+  .navpanel a:hover{
+    color: #f1f1f1;
+  }
+
+  #logo>span {
+    padding: 8px 8px 16px 8px;
+    font-size: var(--step--1);
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+  }
+
+  .navpanel #wings {
+    top: 0;
+    left: 0;
+    position: static;
+    display: inline;
+    overflow: hidden;
+    text-align: center;
+    transform: none;
+  }
+
+.navpanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    z-index: 20;
+  }
+
+  header {
+    display: block;
+    padding: 25% 16px 16px 16px;
+    transition: margin-left .5s;
+  }
+
+  header #left{
+    padding-left: 0;
+  }
+
+  #logo {
+    text-align: center;
+  }
+
+  main {
+    transition: margin-left .5s;
+  }
+
+  section {
+    padding: 80px 50px;
+    background: #eceff1;
+  }
+
+  .flex {
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer p{
+    font-size: var(--step-0);
+  }
+
+  .empty, #right{
+    display: none;
+  }
+
+}
+
+@media screen and (max-height: 450px) {
+.navbar {padding-top: 15px;}
+.navbar a {font-size: 18px;}
+}
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1140,25,1.25,10,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l */
+
+:root {
+  --fluid-min-width: 320;
+  --fluid-max-width: 1140;
+
+  --fluid-screen: 100vw;
+  --fluid-bp: calc(
+    (var(--fluid-screen) - var(--fluid-min-width) / 16 * 1rem) /
+      (var(--fluid-max-width) - var(--fluid-min-width))
+  );
+}
+
+@media screen and (min-width: 1140px) {
+  :root {
+    --fluid-screen: calc(var(--fluid-max-width) * 1px);
+  }
+}
+
+:root {
+  --f--2-min: 11.11;
+  --f--2-max: 16.00;
+  --step--2: calc(
+    ((var(--f--2-min) / 16) * 1rem) + (var(--f--2-max) - var(--f--2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f--1-min: 13.33;
+  --f--1-max: 20.00;
+  --step--1: calc(
+    ((var(--f--1-min) / 16) * 1rem) + (var(--f--1-max) - var(--f--1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-0-min: 16.00;
+  --f-0-max: 25.00;
+  --step-0: calc(
+    ((var(--f-0-min) / 16) * 1rem) + (var(--f-0-max) - var(--f-0-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-1-min: 19.20;
+  --f-1-max: 31.25;
+  --step-1: calc(
+    ((var(--f-1-min) / 16) * 1rem) + (var(--f-1-max) - var(--f-1-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-2-min: 23.04;
+  --f-2-max: 39.06;
+  --step-2: calc(
+    ((var(--f-2-min) / 16) * 1rem) + (var(--f-2-max) - var(--f-2-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-3-min: 27.65;
+  --f-3-max: 48.83;
+  --step-3: calc(
+    ((var(--f-3-min) / 16) * 1rem) + (var(--f-3-max) - var(--f-3-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-4-min: 33.18;
+  --f-4-max: 61.04;
+  --step-4: calc(
+    ((var(--f-4-min) / 16) * 1rem) + (var(--f-4-max) - var(--f-4-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-5-min: 39.81;
+  --f-5-max: 76.29;
+  --step-5: calc(
+    ((var(--f-5-min) / 16) * 1rem) + (var(--f-5-max) - var(--f-5-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-6-min: 47.78;
+  --f-6-max: 95.37;
+  --step-6: calc(
+    ((var(--f-6-min) / 16) * 1rem) + (var(--f-6-max) - var(--f-6-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-7-min: 57.33;
+  --f-7-max: 119.21;
+  --step-7: calc(
+    ((var(--f-7-min) / 16) * 1rem) + (var(--f-7-max) - var(--f-7-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-8-min: 68.80;
+  --f-8-max: 149.01;
+  --step-8: calc(
+    ((var(--f-8-min) / 16) * 1rem) + (var(--f-8-max) - var(--f-8-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-9-min: 82.56;
+  --f-9-max: 186.26;
+  --step-9: calc(
+    ((var(--f-9-min) / 16) * 1rem) + (var(--f-9-max) - var(--f-9-min)) *
+      var(--fluid-bp)
+  );
+
+  --f-10-min: 99.07;
+  --f-10-max: 232.83;
+  --step-10: calc(
+    ((var(--f-10-min) / 16) * 1rem) + (var(--f-10-max) - var(--f-10-min)) *
+      var(--fluid-bp)
+  );
+}
